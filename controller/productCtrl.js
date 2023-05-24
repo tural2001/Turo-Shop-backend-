@@ -102,6 +102,7 @@ const getallProduct = asyncHandler(async (req, res) => {
       const productCount = await Product.countDocuments();
       if (skip >= productCount) throw new Error('Bu Səhifə Mövcud deyil!');
     }
+    query = query.maxTimeMS(20000); // Increase the timeout to 20 seconds
 
     const product = await query;
     res.json(product);
