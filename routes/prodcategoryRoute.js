@@ -6,7 +6,7 @@ const {
   deleteCategory,
   getCategory,
   getallCategory,
-} = require('../controller/prodCategoryCtrl.js');
+} = require('../controller/prodCategoryCtrl');
 const router = express.Router();
 
 router.post('/', authMiddleware, isAdmin, createCategory);
