@@ -6,7 +6,7 @@ const {
   deleteCategory,
   getCategory,
   getallCategory,
-} = require('../controller/prodcategoryCtrl');
+} = require('../controller/prodCategoryCtrl');
 
 const router = express.Router();
 
